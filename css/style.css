@@ -1,0 +1,13 @@
+#header{
+    text-align:center;
+    background-color: grey;
+    padding:1px;
+}
+#container{
+    text-align: center;
+    margin: 10px;    
+}
+#footer{
+    text-align: center;
+    margin: 10px;    
+}
