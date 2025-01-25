@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+  line-height: normal;
+  background-color: #2f303a;
+}
+
+:root {
+  /* fonts */
+  --font-lucida-bright: "Lucida Bright";
+  --font-goudy-old-style: "Goudy Old Style";
+  --font-perpetua-titling-mt: "Perpetua Titling MT";
+
+  /* font sizes */
+  --font-size-44xl: 63px;
+  --font-size-19xl: 38px;
+
+  /* Colors */
+  --color-darkslategray: #2f303a;
+  --color-gray: #010d23;
+  --color-white: #fff;
+
+  /* Paddings */
+  --padding-30xl: 49px;
+  --padding-22xl: 41px;
+  --padding-5xl: 24px;
+  --padding-xl: 20px;
+  --padding-3xl: 22px;}
