@@ -1,0 +1,173 @@
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    text-align: center;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  .page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 18px;
+    margin: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff6f61;
+    color: white;
+  }
+  
+  button:hover {
+    background-color: #ff3b2f;
+  }
+  
+  .memory-grid, .puzzle-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    gap: 10px;
+    margin: 20px;
+  }
+  
+  .memory-card, .puzzle-tile {
+    width: 100px;
+    height: 100px;
+    background-color: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 24px;
+  }
+  
+  .memory-card.flip {
+    background-color: #ff6f61;
+  }
+  
+  .puzzle-tile.empty {
+    background-color: transparent;
+    cursor: default;
+  }
+  
+/* Grand Reveal Page */
+#grand-reveal {
+    background: linear-gradient(45deg, #ffcccb, #ff6f61);
+    padding: 20px;
+    border-radius: 10px;
+    animation: moveBackground 10s infinite alternate;
+    font-family: 'Great Vibes', cursive;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  #valentine-question {
+    font-size: 4rem; /* Bigger font size */
+    animation: slideIn 1s ease-out forwards;
+    opacity: 0;
+  }
+  
+  .button-container {
+    animation: slideIn 1s ease-out 1s forwards;
+    opacity: 0;
+  }
+  
+  #celebration-text {
+    font-size: 2.5rem; /* Bigger font size */
+    font-family: 'Dancing Script', cursive;
+    color: #8b0000; /* Darker shade of red */
+    margin-top: 20px;
+    opacity: 0;
+    transition: opacity 1s ease;
+  }
+  
+  #celebration-text.show {
+    opacity: 1;
+  }
+  
+  /* Transition Page 4: Final Puzzle */
+  #transition-4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  #transition-4 h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  
+  #next-button-4 {
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  #next-button-4:hover {
+    background-color: #45a049;
+  }
+  
+  @keyframes slideIn {
+    0% {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes moveBackground {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+  
+  #confetti-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1000;
+  }
+  
+  .confetti {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+    animation: fall linear infinite;
+  }
+  
+  @keyframes fall {
+    0% {
+      transform: translateY(100vh);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-10vh);
+      opacity: 0;
+    }
+  }
