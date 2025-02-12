@@ -1,0 +1,135 @@
+body {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  text-align: center;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.hidden {
+  display: none;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 18px;
+  margin: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #ff6f61;
+  color: white;
+}
+
+button:hover {
+  background-color: #ff3b2f;
+}
+
+.memory-grid, .puzzle-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  gap: 10px;
+  margin: 20px;
+}
+
+.memory-card, .puzzle-tile {
+  width: 100px;
+  height: 100px;
+  background-color: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 24px;
+}
+
+.memory-card.flip {
+  background-color: #ff6f61;
+}
+
+.puzzle-tile.empty {
+  background-color: transparent;
+  cursor: default;
+}
+
+/* Grand Reveal Page */
+#grand-reveal {
+  background: linear-gradient(45deg, #ffcccb, #ff6f61);
+  padding: 20px;
+  border-radius: 10px;
+  font-family: 'Great Vibes', cursive;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+#valentine-question {
+  font-size: 4rem;
+  animation: slideIn 1s ease-out forwards;
+  opacity: 0;
+}
+
+.button-container {
+  animation: slideIn 1s ease-out 1s forwards;
+  opacity: 0;
+}
+
+#celebration-text {
+  font-size: 2.5rem;
+  font-family: 'Dancing Script', cursive;
+  color: #8b0000;
+  margin-top: 20px;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+#celebration-text.show {
+  opacity: 1;
+}
+
+/* Animations */
+@keyframes slideIn {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes moveBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+.confetti {
+  position: fixed;
+  bottom: 0;
+  animation: floatUp linear infinite;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-120vh); /* Makes sure confetti moves off-screen */
+  }
+}
