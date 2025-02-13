@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#startScreen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#startButton {
+    padding: 20px 40px;
+    font-size: 24px;
+    color: white;
+    background: red;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#startButton:hover {
+    background: darkred;
+}
+
+.valentine-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Dancing Script', cursive;
+    font-size: 80px;
+    color: red;
+    text-shadow: 0 0 40px red, 0 0 80px pink, 0 0 120px crimson;
+}
